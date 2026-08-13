@@ -6,7 +6,7 @@
 
 This project documents the build of a home cybersecurity lab centered around **SafeLine WAF**, an open-source Web Application Firewall. The lab pairs a deliberately vulnerable web application (**DVWA** — Damn Vulnerable Web App) hosted on an Ubuntu Server with a Kali Linux attack box, and places SafeLine WAF in front of the application as a reverse proxy to detect and block malicious traffic such as SQL injection and HTTP flood attacks.
 
-The setup follows the walkthrough in [this YouTube video](https://youtu.be/N0dEC1nuWCQ), adapted and rebuilt from scratch in a personal VirtualBox lab.
+The idea for this lab came from [The Social Dork](https://www.youtube.com/@thesocialdork1133) on YouTube, and was adapted and rebuilt from scratch in a personal VMWare lab.
 
 ![How SafeLine Works](images/how-safeline-works.png)
 
@@ -166,9 +166,6 @@ sudo nano /etc/hosts
 
 DVWA is then reachable from Kali at `http://dvwa.local:8080/DVWA`.
 
-### 5.2 (Optional) BIND DNS Server
-
-For a more realistic setup, BIND9 can be installed on Ubuntu to serve as a dedicated DNS server for the `dvwa.local` zone, with Kali pointed at it via `/etc/resolv.conf`. See the [reference guide](https://youtu.be/N0dEC1nuWCQ) for the full zone-file configuration.
 
 ## 6. Creating a Self-Signed SSL Certificate
 
@@ -289,6 +286,6 @@ Possible next steps:
 
 ## 11. References
 
-- [SafeLine WAF Home Lab — YouTube walkthrough](https://youtu.be/N0dEC1nuWCQ)
+- [The Social Dork — YouTube channel](https://www.youtube.com/@thesocialdork1133)
 - [DVWA (Damn Vulnerable Web App)](https://github.com/digininja/DVWA)
 - [SafeLine WAF](https://waf.chaitin.com/)
